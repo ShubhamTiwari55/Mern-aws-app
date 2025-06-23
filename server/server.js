@@ -8,11 +8,11 @@ const app = express();
 connectDB();
 app.use(helmet.frameguard({ action: "deny" }));
 
-const corsOptions = {
-  origin: "http://localhost:3000", 
-  credentials: true,
-};
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'http://16.16.208.117:3000',
+  credentials: true
+}));
+
 
 app.use(express.json());
 
